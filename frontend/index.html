@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfy Factory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Comfy Factory</h1>
+            <div id="game-info">
+                <span id="order-info"></span>
+                <span id="score-info"></span>
+                <span id="mistakes-display"></span>
+            </div>
+        </header>
+
+        <div id="game-area">
+            <!-- Order card (visual only) -->
+            <aside id="order-panel">
+                <div class="panel-label">注文</div>
+                <div id="order-cake"></div>
+            </aside>
+
+            <!-- Conveyor belt section -->
+            <div id="conveyor-section">
+                <!-- Step progress dots -->
+                <div id="step-progress"></div>
+
+                <!-- Belt with arrows -->
+                <div id="belt-area">
+                    <button id="prev-btn" class="nav-btn" disabled></button>
+                    <div id="belt-content">
+                        <div id="assembly-cake"></div>
+                        <div class="conveyor-belt"></div>
+                    </div>
+                    <button id="next-btn" class="nav-btn" disabled></button>
+                </div>
+
+                <!-- Ingredient options -->
+                <div id="ingredients-buttons"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="hidden">
+        <div id="overlay-content">
+            <h2 id="overlay-title"></h2>
+            <p id="overlay-message"></p>
+            <button id="new-game-btn">もう一度遊ぶ</button>
+        </div>
+    </div>
+
+    <!-- Feedback toast -->
+    <div id="feedback" class="feedback hidden"></div>
+
+    <script src="game.js"></script>
+</body>
+</html>

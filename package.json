@@ -1,0 +1,14 @@
+{
+    "name": "comfy-factory",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build:ts": "tsc",
+        "build:cpp": "g++ -std=c++17 -Wall -O2 -Isrc -o server.exe src/main.cpp src/game.cpp src/server.cpp -lws2_32",
+        "build": "npm run build:ts && npm run build:cpp",
+        "start": "npm run build && server.exe"
+    },
+    "devDependencies": {
+        "typescript": "^5.7.0"
+    }
+}
